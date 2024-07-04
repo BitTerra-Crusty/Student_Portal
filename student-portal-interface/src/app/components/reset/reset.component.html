@@ -1,0 +1,33 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="card border bg-white">
+                    <div class="card-header">
+                        <h3 class="pt-3 font-weight-bold">Reset Password</h3>
+                    </div>
+                    <div class="card-body p-3">
+                        <form [formGroup]="resetPasswordForm" (ngSubmit)="reset()">
+                            <div class="mb-3">
+                                <div class="input-group" [class.error]="resetPasswordForm.controls['password'].dirty && resetPasswordForm.hasError('required','password')"> 
+                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" placeholder="New Password" formControlName="password">
+                                </div>
+                                <small *ngIf="resetPasswordForm.controls['password'].dirty && resetPasswordForm.hasError('required','password')" class="text-danger">*Password is required*</small>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group" [class.error]="resetPasswordForm.controls['confirmPassword'].dirty && resetPasswordForm.hasError('required','confirmPassword')"> 
+                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword">
+                                </div>
+                                <small *ngIf="resetPasswordForm.controls['confirmPassword'].dirty && resetPasswordForm.hasError('required','confirmPassword')" class="text-danger">*Confirm Password is required*</small>
+                                <small *ngIf="resetPasswordForm.hasError('confirmPasswordValidator','confirmPassword')" class="text-danger">*Password didn't match*</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mt-4">Reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

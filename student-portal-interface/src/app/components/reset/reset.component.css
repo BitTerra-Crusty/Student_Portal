@@ -1,0 +1,26 @@
+
+.card {
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.input-group-text {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.8);
+}
